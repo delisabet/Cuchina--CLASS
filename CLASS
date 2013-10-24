@@ -1,0 +1,163 @@
+class CHI {
+  //GLOBAL VARIABLES, main variables of the class
+
+  float x; 
+  float y; 
+  float speedX = 2;
+  // if we put the number in negative then it will move to the left 
+  float speedY = 1;
+  // CONSTRUCTOR
+  CHI(float _x, float _y) {
+    x= _x;
+    y= _y;
+  }
+  //FUNCTIONS
+  void run() {
+    //display 
+    //move
+    //bounce
+    //gravity
+    display(); 
+    move(); 
+    bounce();
+    gravity();
+  } 
+   void gravity() {
+   speedY += 0.2 ; 
+    //x = x + 2; 
+    //update your position adding two each frame
+  }
+  void bounce() {
+    if ( x > 600 ) {
+      speedX= speedX *-1;
+    }
+    if ( x < 0 ) {
+      speedX= speedX *-1;
+    }
+    if ( y > 600) {
+      speedY= speedY *-1;
+    }
+     if ( y < 0) {
+      speedY= speedY *-1;
+    }
+  }
+  void move() {
+    x += speedX; 
+    y += speedY; 
+    //x = x + 2; 
+    //update your position adding two each frame
+  }
+  void display () {
+    fill(#FFE47B);
+  //ellipse ( x, y, Width, Height)//
+  ellipse( x, y-30, 110, 95 ); 
+  //hat//
+
+
+  fill(#000000);
+  ellipse( x, y-25, 70, 60 ); 
+  //hair//
+
+
+
+
+  fill(#FF434B);
+  arc(x, y, 300, 300, radians(35), radians(145)); 
+  //arc(x,y, witdth, height, start, stop)//
+  // start  = 3 o'cloock =0 )//
+  //stop 0 PI.0.5= un quarto  pero PI= semicirculo) //
+  // RED SKIRT//
+
+  fill(#627DFF);
+  arc(x, y, 260, 260, radians(35), radians(145)); 
+  //arc(x,y, witdth, height, start, stop)//
+  // blue skirt//
+
+
+  fill(#FFE47B);
+  arc(x, y, 210, 210, radians(35), radians(145)); 
+  //arc(x,y, witdth, height, start, stop)//
+  // YELLOW SKIRT//
+
+
+  fill(#E8AF82);
+  ellipse( x+97, y+6, 20, 15 ); 
+  //manita derecha- right hand//
+
+
+  fill(#E8AF82);
+  ellipse( x-96, y+6, 20, 15 ); 
+  //manita izquierda- left hand //
+
+  noStroke ();
+  fill(#FFE47B);
+  rect(x-93, y, 185, 16); 
+  //brazos//
+
+
+  fill(#ffffff);
+  arc(x, y, 150, 140, 0, PI); 
+  //arc(x,y, witdth, height, start, stop)//
+  // start  = 3 o'cloock =0 )//
+  //stop 0 PI.0.5= un quarto  pero PI= semicirculo) 
+  //camisa//
+
+  //-------------braid-----------------//
+
+  fill(#000000);
+  ellipse( x+27, y, 12, 12 ); 
+  //trenza1//
+
+  fill(#000000);
+  ellipse( x+29, y, 10, 8 ); 
+  //trenza2//
+
+  fill(#000000);
+  ellipse( x+28, y, 10, 8 ); 
+  //trenza3//
+
+  fill(#000000);
+  ellipse( x+27, y, 10, 8 ); 
+  //trenza4//
+  noStroke ();
+  fill(#000000);
+  ellipse( x+26, y, 10, 8 ); 
+  //trenza5//
+
+  fill(#000000);
+  ellipse( x+27, y, 10, 8 ); 
+  //trenza 6//
+
+  fill(#000000);
+  ellipse( x+28, y, 10, 8 ); 
+  //trenza7//
+
+  fill(#000000);
+  ellipse( x+29, y, 10, 8 ); 
+  //trenza8//
+  //-----------------------braid----------------------//
+
+  //noStroke ();
+  fill(#E8AF82);
+  ellipse( x, y-30, 16, 10 ); 
+  //cuellito//
+
+  fill(#E8AF82);
+  ellipse( x, y-15, 60, 50 ); 
+  //cabeza//
+
+  fill(#FF434B);
+  arc(x, y-5, 12, 9, 0, PI); 
+  //arc(x,y, witdth, height, start, stop)//
+  // start  = 3 o'cloock =0 )//
+  //stop 0 PI.0.5= un quarto  pero PI= semicirculo) 
+  //boquita//
+  fill(#000000);
+  ellipse( x-12, y-20, 7, 6 ); 
+  //ojo izquierdo////
+
+  fill(#000000);
+  ellipse( x+16, y-20, 7, 6 ); 
+  //ojo derecho////
+  }
+}

@@ -4,7 +4,7 @@ Cuchina--CLASS
 //Declare
 
 CHI [] NumberCHI = new CHI [10]; 
-//Ball is the class- my ball is the class instance
+//CHI is the class- my CHI is the class instance
 
 
 //Initialize
@@ -17,7 +17,7 @@ void setup() {
   //Initialize
   for( int i = 0; i < 10; i++) { 
     NumberCHI [i] = new CHI (random(0,1000), random(0,200)); 
-    // new Ball(400,400)the numbers are the starting point
+    // new CHI(400,400)the numbers are the starting point
   }
 }
 
@@ -26,7 +26,7 @@ void draw() {
   //Call Functionality
   for( int i = 0; i < 10; i++) { 
    
-    // new Ball(400,400)the numbers are the starting point
+    // new CHI(400,400)the numbers are the starting point
 
   NumberCHI[i].run();
   //you only write one fuction but it has all the others in the class

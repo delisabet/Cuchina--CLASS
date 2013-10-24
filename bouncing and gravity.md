@@ -1,8 +1,9 @@
 Cuchina--CLASS
 ==============
+
 //Declare
 
-Ball [] NumberBalls = new Ball [10]; 
+CHI [] NumberCHI = new CHI [10]; 
 //Ball is the class- my ball is the class instance
 
 
@@ -15,7 +16,7 @@ void setup() {
 
   //Initialize
   for( int i = 0; i < 10; i++) { 
-    NumberBalls [i] = new Ball (random(0,1000), random(0,200)); 
+    NumberCHI [i] = new CHI (random(0,1000), random(0,200)); 
     // new Ball(400,400)the numbers are the starting point
   }
 }
@@ -27,7 +28,7 @@ void draw() {
    
     // new Ball(400,400)the numbers are the starting point
 
-  NumberBalls[i].run();
+  NumberCHI[i].run();
   //you only write one fuction but it has all the others in the class
 }
   }
